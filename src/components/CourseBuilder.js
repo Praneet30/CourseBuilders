@@ -4,6 +4,7 @@ import { FaPlus, FaLink, FaUpload, FaBook } from "react-icons/fa";
 import Modal from "./Modal";
 import LinkModal from "./LinkModal";
 import Resource from "./Resource";
+import emptyStateImage from "./img.png"; // Import the image
 
 const CourseBuilder = () => {
   const [modules, setModules] = useState([]);
@@ -207,30 +208,44 @@ const CourseBuilder = () => {
         )}
       </div>
 
-      {modules.map((module) => (
-        <Module
-          key={module.id}
-          module={module}
-          addResource={addResourceToModule}
-          handleDrop={handleDrop}
-          renameModule={renameModule}
-          deleteModule={deleteModule}
-          deleteResource={deleteResource}
-          onEdit={editResource}
-        />
-      ))}
-
-      <div className="resources">
-        {resources.map((resource) => (
-          <Resource
-            key={resource.id}
-            resource={resource}
-            onDelete={() => deleteResource(resource.id)}
-            handleDrop={handleDrop}
-            onEdit={editResource}
+      {modules.length === 0 && resources.length === 0 ? (
+        <div style={{ textAlign: "center", marginTop: "50px" }}>
+          <img
+            src={emptyStateImage}
+            alt="Empty state"
+            style={{ maxWidth: "300px", marginBottom: "20px" }}
           />
-        ))}
-      </div>
+          <p><b>Nothing added here yet</b></p>
+          <p>Click on the [+] Add button to add items to this course</p>
+        </div>
+      ) : (
+        <>
+          {modules.map((module) => (
+            <Module
+              key={module.id}
+              module={module}
+              addResource={addResourceToModule}
+              handleDrop={handleDrop}
+              renameModule={renameModule}
+              deleteModule={deleteModule}
+              deleteResource={deleteResource}
+              onEdit={editResource}
+            />
+          ))}
+
+          <div className="resources">
+            {resources.map((resource) => (
+              <Resource
+                key={resource.id}
+                resource={resource}
+                onDelete={() => deleteResource(resource.id)}
+                handleDrop={handleDrop}
+                onEdit={editResource}
+              />
+            ))}
+          </div>
+        </>
+      )}
 
       <Modal
         isOpen={isModalOpen}
