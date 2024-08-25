@@ -11,13 +11,16 @@ Modals for Input: User-friendly modals for capturing input when adding or renami
 
 Getting Started
 1. Unzip the Project
+
 Unzip the downloaded file to extract the project directory.
 
 2. Navigate to the Project Directory
+
 cd coursebuild
 
 3. Install Dependencies
-Install all required dependencies using npm:
+Install all required dependencies using npm
+
 npm install
 
 4. Run the Application
