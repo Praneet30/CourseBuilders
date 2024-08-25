@@ -5,8 +5,11 @@ The CourseBuilder frontend is a React-based application designed to help users c
 
 Features
 Module Management: Add, rename, delete, and reorder course modules.
+
 Resource Management: Upload files, add links, edit, and delete resources within each module.
+
 Drag-and-Drop: Easily reorder modules and resources using drag-and-drop functionality.
+
 Modals for Input: User-friendly modals for capturing input when adding or renaming modules.
 
 Getting Started
