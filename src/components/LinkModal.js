@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 const LinkModal = ({ isOpen, onClose, onSubmit }) => {
     const [linkName, setLinkName] = useState('');
     const [linkURL, setLinkURL] = useState('');
-
-    // Reset the linkName and linkURL whenever the modal is opened
     useEffect(() => {
         if (isOpen) {
             setLinkName('');

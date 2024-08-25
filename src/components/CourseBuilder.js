@@ -4,7 +4,7 @@ import { FaPlus, FaLink, FaUpload, FaBook } from "react-icons/fa";
 import Modal from "./Modal";
 import LinkModal from "./LinkModal";
 import Resource from "./Resource";
-import emptyStateImage from "./img.png"; // Import the image
+import emptyStateImage from "./img.png"; 
 
 const CourseBuilder = () => {
   const [modules, setModules] = useState([]);

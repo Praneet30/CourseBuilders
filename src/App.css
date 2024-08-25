@@ -54,9 +54,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px; /* Add margin to give space from content above */
-  width: 100%; /* Ensure button takes full width of its container */
-  justify-content: center; /* Center align the content within the button */
+  margin-top: 20px; 
+  width: 100%; 
+  justify-content: center; 
 }
 
 .add-module-btn svg {
@@ -124,19 +124,19 @@
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #e9ecef;
-  justify-content: space-between; /* Space between items */
+  justify-content: space-between; 
 }
 
 .resource .resource-details {
   display: flex;
   align-items: center;
-  flex: 1; /* Allow details to take remaining space */
+  flex: 1; 
 }
 
 .resource .resource-actions {
   display: flex;
   align-items: center;
-  margin-left: 10px; /* Space between details and actions */
+  margin-left: 10px; 
 }
 
 .resource svg {
@@ -146,7 +146,7 @@
 
 .resource-actions svg {
   cursor: pointer;
-  margin-left: 10px; /* Space between action icons */
+  margin-left: 10px; 
 }
 
 /* styles.css */
